@@ -1,0 +1,111 @@
+/* Color Root */
+:root {
+  --body: #c8e4fc;
+  --header: #c8e4fc;
+  --font-color: #fcfff8;
+  --alt-font-color: #7d7d8c;
+  --overlay: rgba(0, 0, 0, 0.8);
+}
+
+/* Body */
+body {
+  background: var(--body) !important;
+  color: var(--font-color) !important;
+  font-size: 16px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--header);
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: default;
+}
+.header .logo-2 {
+  color: var(--alt-font-color);
+}
+
+/* List Heading */
+.list-heading {
+  color: var(--alt-font-color);
+  cursor: default;
+}
+
+/* List Row */
+.movie-app > .row {
+  overflow-x: auto;
+  overflow-y: hidden;
+  /*flex-wrap: nowrap;*/
+ 
+
+}
+
+/* Poster Image */
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  width: 270px;
+  border-radius: 8px;
+  background-color: #f5d8c1;
+  border: solid 2px #817e7a;
+  box-shadow: inset 0 0 10px #817e7a;
+  
+}
+.image-container > img {
+    width: 130px;
+  height: 190px;
+  margin: 20px ;
+ border-radius: 5px;
+  border: solid 2px #6f6a6a;
+  margin: 0 auto;
+    margin-top: 20px;
+}
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* Top Overlay */
+.top-overlay {
+  position: absolute;
+  background-color: var(--overlay);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  top: 0;
+}
+.top-overlay ul {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+.top-overlay strong {
+  color: var(--alt-font-color);
+}
+.image-container:hover .top-overlay {
+  opacity: 1;
+}
+
+/* Bottom Overlay */
+.bottom-overlay {
+  position: absolute;
+  background-color: var(--overlay);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 1rem;
+  text-align: center;
+}
+.image-container:hover .bottom-overlay {
+  opacity: 1;
+}
+span {
+   color: #212529;
+   font-size: 12px;
+   padding: 0 0 0 10px;
+}
